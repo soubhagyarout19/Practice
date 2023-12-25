@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    Input: accounts = [[1,2,3],[3,2,1]]
+    Output: 6
+    Explanation:
+    1st customer has wealth = 1 + 2 + 3 = 6
+    2nd customer has wealth = 3 + 2 + 1 = 6
+    Both customers are considered the richest with a wealth of 6 each, so return 6.
+
+    Input: accounts = [[1,5],[7,3],[3,5]]
+    Output: 10
+    Explanation:
+    1st customer has wealth = 6
+    2nd customer has wealth = 10
+    3rd customer has wealth = 8
+    The 2nd customer is the richest with a wealth of 10.
+
+    var maximumWealth = function(accounts) {
+        let largest = 0;
+        for(let i=0;i<accounts.length;i++){
+            let sum = 0;
+            for(let j=0;j<accounts[i].length;j++){
+                sum += accounts[i][j];
+            }
+            if(sum>largest){
+                largest = sum;
+            }
+        }
+        return largest;
+    };
+
+
+    <script>
+        let arr = [[1,5],[7,3],[3,5]];
+        let ans = arr[0][0];
+        let sum = 0;
+        let largest = 0;
+        let temp = 0;
+        for(let i=0;i<arr.length;i++){
+            sum = 0;
+            for(let j=0;j<arr[i].length;j++){
+                sum = sum + arr[i][j];
+                temp = sum;
+            }
+            if(temp>largest){
+                largest = temp;
+            }
+        }
+        console.log(largest);
+    </script>
+</body>
+
+</html>

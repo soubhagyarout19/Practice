@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+        function Sumofdigits(){
+            let n = Number(prompt("Enter a number")); //123
+            let sum = 0;
+            let x = 0;
+            let y = 0;
+
+            for(; ;){
+                x = n%10;
+                sum = sum+x;
+                y = Math.trunc(n/10);
+                n = y;
+                if(n === 0){
+                    console.log(sum);
+                    return;
+                }
+            }
+        }
+        Sumofdigits();
+    </script>
+</body>
+</html>

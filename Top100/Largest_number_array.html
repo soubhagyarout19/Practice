@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+
+    <script>
+        let arr = [1,4,3,20,5,3,7,9,20,1];
+        let temp = 0;
+        let temp1 = 0;
+        let result = 0;
+        for(let i=0; i<arr.length; i++){
+            temp = arr[i];
+            if(temp>temp1){
+                result = temp;
+            }
+            temp1 = temp;
+        }
+        console.log(result);
+    </script>
+</body>
+</html>

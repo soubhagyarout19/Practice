@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+            function obj(arr) {
+            this.arr = arr;
+            let x = 0;
+            this.len = function vch(){
+                for(let z in arr){
+                    x++;
+                }
+                console.log(x);
+            }
+            
+        }
+
+        // let obj1 = new obj("xyz",36,"odhb");
+        // let obj2 = new obj("hdf",56,"hdfn");
+        let myArray = new obj([2,4,5,6,7]);
+        console.log(myArray.len());
+    </script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+
+    <script>
+        records = [
+            { "name": "John", "salary": 50000, "age": 30, "isActive": true },
+            { "name": "Jane", "salary": 60000, "age": 28, "isActive": false },
+            { "name": "Michael", "salary": 75000, "age": 35, "isActive": true },
+            { "name": "Emily", "salary": 45000, "age": 25, "isActive": true },
+            { "name": "Robert", "salary": 80000, "age": 40, "isActive": false },
+            { "name": "Sophia", "salary": 55000, "age": 29, "isActive": true },
+            { "name": "William", "salary": 70000, "age": 33, "isActive": true },
+            { "name": "Olivia", "salary": 52000, "age": 27, "isActive": false },
+            { "name": "David", "salary": 60000, "age": 31, "isActive": true },
+            { "name": "Ava", "salary": 48000, "age": 26, "isActive": false },
+        ]
+        let x = records.map((element)=>{
+            if(element.isActive == false){
+                element.salary = null;
+            }
+            let arr = [];
+            arr.push(element.name,element.salary);
+            return arr;
+        })
+        console.log(x);
+    </script>
+</body>
+
+</html>

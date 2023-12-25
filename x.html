@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+        // let a = 1;
+        // let b = 2;
+        // a = a++ + b++ + ++a + ++b + ++a;
+        // b = --a + b-- - a-- + --b;
+        // console.log(a);
+        // console.log(b);
+
+        // let num =0;
+        // function add(a,b){
+        //     num = num+a;
+        //     return num+b;
+        // }
+        // console.log(add(10,20));
+        // console.log(add(10,20));
+        // console.log(add(10,20));
+        // console.log(add(10,20));
+        // console.log(add(10,20));
+
+        //0 1 1 2 3 5 8 13 21
+
+        // let n = Number(prompt("Enter 1st number"));
+        // let m = Number(prompt("Enter 2nd number"));
+        // let a = 0;
+        // let b = 1;
+        // let c = 0;
+        // for(; ;){
+        //     c = a+b;
+        //     a = b;
+        //     b = c;
+        //     if(c>m){
+        //         break;
+        //     }
+        //     if(c>n){
+        //         console.log(c);
+        //     }
+        //     if(c==n){
+        //         console.log(`${n} is in fibbonacci series`);
+        //     }
+        // }
+
+            let n = Number(prompt("Enter a number"));
+            let len=0;
+            while(n>0){
+                len++;
+                n = Math.trunc(n/10);
+            }
+            console.log(len);
+    </script>
+</body>
+</html>

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    I 1
+    V 5
+    X 10
+    L 50
+    C 100
+    D 500
+    M 1000
+
+    Input: s = "LVIII"
+    Output: 58
+    Explanation: L = 50, V= 5, III = 3.
+    S = XII;
+    <script>
+        var romanToInt = function (s) {
+            let I = 1;
+            let V = 5;
+            let X = 10;
+            let L = 50;
+            let C = 100;
+            let D = 500;
+            let M = 1000;
+            let sum = 0;
+            let temp = 0;
+            for (let i = 0; i < s.length; i++) {
+                if (s[i] == "I") {
+                    temp = 1;
+                    sum = sum + temp;
+                }
+                if (s[i] == "V") {
+                    temp = 5;
+                    sum = sum + temp;
+                }
+                if (s[i] == "X") {
+                    temp = 10;
+                    sum = sum + temp;
+                }
+                if (s[i] == "L") {
+                    temp = 50;
+                    sum = sum + temp;
+                }
+                if (s[i] == "C") {
+                    temp = 100;
+                    sum = sum + temp;
+                }
+                if (s[i] == "D") {
+                    temp = 500;
+                    sum = sum + temp;
+                }
+                if (s[i] == "M") {
+                    temp = 1000;
+                    sum = sum + temp;
+                }
+            }
+            console.log(sum);
+        }
+        romanToInt("C");
+
+        // var romanToInt = function (s) {
+        //     let I = 1;
+        //     let V = 5;
+        //     let X = 10;
+        //     let L = 50;
+        //     let C = 100;
+        //     let D = 500;
+        //     let M = 1000;
+        //     let sum = 0;
+        //     let temp;
+        //     for (let i = 0; i < s.length; i++) {
+        //         if (s[i] == "I") {
+        //             temp = 1;
+        //             sum = sum + temp;
+        //         }
+        //         if (s[i] == "V") {
+        //             temp = 5;
+        //             sum = sum + temp;
+        //         }
+        //         if (s[i] == "X") {
+        //             temp = 10;
+        //             sum = sum + temp;
+        //         }
+        //         if (s[i] == "L") {
+        //             temp = 50;
+        //             sum = sum + temp;
+        //         }
+        //         if (s[i] == "C") {
+        //             temp = 100;
+        //             sum = sum + temp;
+        //         }
+        //         if (s[i] == "D") {
+        //             temp = 500;
+        //             sum = sum + temp;
+        //         }
+        //         if (s[i] == "M") {
+        //             temp = 1000;
+        //             sum = sum + temp;
+        //         }
+        //     }
+        //     console.log(sum);
+        // }
+
+        // romanToInt("MCMXCIV"); // Output should be 1994
+    </script>
+</body>
+
+</html>

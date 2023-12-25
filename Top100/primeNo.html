@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+        function primeNo(){
+            let n = Number(prompt("Enter a number"));
+            let isPrime = true;
+            if(n<2){
+                isPrime = false;
+            }
+
+            for(let i=2; i<n; i++){
+                if(n%i === 0){
+                    isPrime = false;
+                    break;
+                }
+            }
+            if(isPrime === true){
+                console.log(`${n} is a prime no`);
+            }
+            else{
+                console.log(`${n} is not a prime no`);
+            }
+        }
+        primeNo();
+    </script>
+</body>
+</html>

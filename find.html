@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+
+    <script>
+        let arr = [25,30,40,50];
+        // let x = arr.find((element,index,array) =>{
+        //     return index == 3;
+        // })
+        // console.log(x);
+
+        // let x = arr.filter((element,index,array)=>{
+        //     return element>=30;
+        // })
+        // console.log(x);
+
+        // let x = arr.some((element) =>{
+        //     return element>30;
+        // })
+        // console.log(x);
+
+        let x = arr.reduce((accumulator,element)=>{
+            console.log(element);
+            return accumulator+element;
+        },0)
+        console.log(x);
+    </script>
+</body>
+</html>

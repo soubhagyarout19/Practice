@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+
+    <script>
+
+        // let print = function(arg1,arg2) {
+        //     console.log(`My name is ${this.name} my age is ${this.age} and i am from ${this.address}, ${arg1}, ${arg2}`);
+        // }
+
+        // let obj = {
+        //     name: "sdr",
+        //     age: 22,
+        //     address: "Odisha",
+        // }
+
+        // let obj2 = {
+        //     name: "xyz",
+        //     age: 100,
+        //     address: "Delhi",
+        // }
+        // print.call(obj,"tuv","klm");
+        // print.apply(obj2,["tuv","klm"]);
+        // let x = print.bind(obj2,"dggdg","hgggs");
+        // x();
+
+        let P1 = new Promise((resolve, reject) => {
+            let num = Math.trunc(Math.random()*10);
+            if(num<=5){
+                resolve("less than or equal to 5");
+            }
+            else{
+                reject("greater than 5");
+            }
+        })
+
+        let P2 = new Promise((resolve, reject) => {
+            let num = Math.trunc(Math.random()*10);
+            if(num<=5){
+                resolve("less than or equal to 5");
+            }
+            else{
+                reject("greater than 5");
+            }
+        })
+
+        Promise.allSettled([P1,P2]).then((data)=>{
+            console.log(data);
+        }).catch((err)=>{
+            console.log(err);
+        })
+    </script>
+</body>
+
+</html>

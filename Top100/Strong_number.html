@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+
+    <script>
+        let num = Number(prompt("Enter a number"));
+        let tempnum = num;
+        temp = 0;
+        result = 0;
+        while(num>0){
+            temp = num%10;
+            let factorial = 1;
+            for(let i=temp;i>0;i--){
+                factorial = factorial * i;
+            }
+            result = result + factorial;
+            num = Math.trunc(num/10);
+        }
+        if(tempnum == result){
+            console.log(`${tempnum} is a Strong number`);
+        }
+        else{
+            console.log(`${tempnum} is not a Strong number`);
+        }
+    </script>
+</body>
+</html>

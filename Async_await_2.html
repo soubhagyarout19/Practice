@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+
+    <script>
+        let arr = [10,20,30,40,50];
+        let target = 20;
+        let start = 0
+        let end = arr.length-1;
+        while(start <= end){
+            let mid = Math.trunc(start+(end-start)/2);
+            if(arr[mid]<target){
+                start = mid+1;
+            }
+            if(arr[mid]>target){
+                end = mid-1;
+            }
+            if(arr[mid] == target){
+                console.log("Present");
+                break;
+            }
+            else if(arr[mid] != target){
+                console.log("Not present");
+            }
+        }
+    </script>
+</body>
+</html>

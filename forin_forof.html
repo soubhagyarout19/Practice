@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+
+    <script>
+        let arr = [10, 20, "q", 5, "z", "k"];
+        // let x = arr.sort((start,end)=>{
+        //     return start-end;
+        // })
+        // console.log(x);
+        // let arr = [10, 20, "q", 5, "z", "k"];
+
+        let x = arr.sort((a, b) => {
+            if (typeof a === 'number' && typeof b === 'number') {
+                return a - b;
+            } else {
+                return a.toString().localeCompare(b.toString());
+            }
+        });
+
+        console.log(x);
+
+    </script>
+</body>
+
+</html>
