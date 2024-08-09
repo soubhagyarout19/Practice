@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="myChart" style="max-width:700px; height:400px"></div>
+    <script src="https://www.gstatic.com/charts/loader.js"></script>
+    <script>
+        google.charts.load('current',{packages:['corechart']});
+        google.charts.setOnLoadCallback(drawChart);
+        
+        // Your Function
+        function drawChart() {
+
+// Set Data
+const data = google.visualization.arrayToDataTable([
+  ['Contry', 'Mhl'],
+  ['Italy', 55],
+  ['France', 49],
+  ['Spain', 44],
+  ['USA', 24],
+  ['Argentina', 15]
+]);
+
+// Set Options
+const options = {
+  title: 'World Wide Wine Production'
+};
+
+// Draw
+const chart = new google.visualization.BarChart(document.getElementById('myChart'));
+chart.draw(data, options);
+
+}
+        </script>
+</body>
+</html>

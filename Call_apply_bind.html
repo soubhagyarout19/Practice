@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+        function printName(){
+            console.log(this.name + ' ' + this.sports);
+        }
+
+        let obj1 = {
+            name: 'Soubhagya',
+            sports: 'Cricket',
+            print: function(){
+                console.log(this.name + ' ' + this.sports);
+            }
+        }
+
+        let obj2 = {
+            name: 'Shrinibas',
+            sports: 'Hockey'
+        }
+
+        // obj1.print();
+        printName.call(obj2);
+        printName.call(obj1);
+
+        printName.apply(obj2);
+        
+        let x = printName.bind(obj1);
+        x();
+    </script>
+</body>
+</html>

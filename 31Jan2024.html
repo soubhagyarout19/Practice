@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+
+<script>
+    //Promise
+    // let P1 = new Promise((resolve,reject)=>{
+    //     let num = Math.random()*10;
+    //     if(num >= 5){
+    //         resolve("Accepted");
+    //     }
+    //     else{
+    //         reject("Rejected");
+    //     }
+    // })
+
+    // P1.then((data)=>{
+    //     console.log(data);
+    // }).catch((err)=>{
+    //     console.log(err);
+    // })
+
+
+    async function getData(){
+        let num = Math.random()*10;
+        let P1 = new Promise((resolve,reject)=>{
+            if(num>5){
+                resolve("Accepted");
+            }
+            else{
+                reject("Rejected");
+            }
+        })
+
+        try{
+            let result = await P1;
+            console.log(result);
+        }
+        catch(err){
+            console.log(err);
+        }
+    }
+    getData()
+
+    
+</script>
+</html>
