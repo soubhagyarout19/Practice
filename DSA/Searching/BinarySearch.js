@@ -7,10 +7,10 @@ let end = arr.length-1;
 while(start<=end){
     let mid = Math.trunc((start+end)/2);
     if(k>mid){
-        start = start + 1;
+        start = mid + 1;
     }
     if(k<mid){
-        end = end - 1;
+        end = mid - 1;
     }
     if(k === arr[mid]){
         console.log(k + " is present in the array");
